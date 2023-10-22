@@ -1,0 +1,64 @@
+@media only screen and (max-width:800px){
+	.main{
+		transform: translateY(-30%);
+		width: 400px;
+		height: 400px;
+	}
+	.main h1{
+		font-size: 36px;
+		top:10%;
+	}
+	.main h3{
+		font-size: 18px;
+		top:25%;
+	}
+	.options{
+		font-size: 16px;
+		left:8%;
+
+	}
+	.options select{
+		margin-top:30px ;
+		width: 120px;
+	}
+	.start{
+		font-size: 16px;
+		left:200px;
+		width: 90px;
+  		height: 30px;
+	}
+	.main-btn{
+		font-size: 16px;
+		left:100px;
+		width: 90px;
+  		height: 30px;
+	}
+	.balls-g{
+		width: 80%;
+	}
+	.game-page .ball{
+		width: 40px;
+		height: 40px;
+		gap:1px;
+		margin-bottom: 5px;
+	}
+	.count{
+		top:250px;
+	}
+	.count input{
+		font-size: 0.5em;
+		width:120px;
+	}
+	.h-st{
+		font-size: 18px!important;
+		left:20%;
+	}
+	.check{
+		width: 90px;
+		height: 30px;
+	}
+	.rest{
+		width: 90px;
+		height: 30px;
+	}
+}

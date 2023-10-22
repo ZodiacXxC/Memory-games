@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="res.css">
+	<link rel="icon" href="ico.png" type="image/icon type">
+	<script src="jquery.js"></script>
+
+	<title>Count Colors</title>
+</head>
+<body ng-controller="PlaylistsCtrl">
+	<div class="main" id="main">
+		<div class="main-m" id="main-m">
+			<h1>CountMeIfYouCan</h1>
+			<h3>Choose a difficulty</h3>
+			<div class="options">
+				<label for="speed" class="la-speed">Speed :</label>
+				<select name="speed" id="op-speed">
+					<option value="13">Slow</option>
+					<option value="10">Normal</option>
+					<option value="7">Fast</option>
+					<option value="5">Very Fast</option>
+				</select>
+				<label for="balls" class="la-balls">Balls :</label>
+				<select name="balls" id="op-balls">
+					<option value="10">10 Ball</option>
+					<option value="15">15 Ball</option>
+					<option value="20">20 Ball</option>
+					<option value="25">25 Ball</option>
+				</select>
+			</div>
+			<button id="start" class="start">Start</button>
+			<button id="main-btn" class="main-btn">Main Page</button>
+		</div>
+		<div id="game-page" class="game-page">
+			<div class="balls-g">
+				
+			</div>
+			<div class="count">
+				<input type="text" onkeypress="isInput(event)" id="in-red" placeholder="Number for red balls" >
+				<input type="text" onkeypress="isInput(event)" id="in-purble"  placeholder="Number for purble balls" >
+				<input type="text" onkeypress="isInput(event)" id="in-blue" placeholder="Number for blue balls"><br>
+				<button class="check" id="check">Check</button>
+				<button class="rest" id="rest">Rest</button>
+			</div>
+		</div>
+	</div>
+	<div class="notify"><span id="notifyType" class=""></span></div>
+	<script src="js.js"></script>
+</body>
+</html>
