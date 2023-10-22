@@ -1,0 +1,253 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background:#c8b7a6;
+
+}
+.main{
+	position: relative;
+	width: 600px;
+	height: 600px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+.main-m{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.main::before{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	content: '';
+	position: absolute;
+	width:300px;
+	height: 150%;
+	background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+	animation: an 4s linear infinite;
+}
+.main::after{
+	position: absolute;
+	content: '';
+	inset: 4px;
+	background:#c8b7a6;
+	z-index: 1;
+}
+@keyframes an{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.main > *{z-index: 2}
+#tit{
+	opacity: 0;
+}
+#tits{
+	opacity: 0;
+}
+.main h1{
+	position: absolute;
+	top:80px;
+	font-size:50px;
+	color:#234E70;
+	font-weight: 800;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.39);
+}
+.main h3{
+	position: absolute;
+	top:150px;
+	font-size: 32px;
+	color:#234E70;
+	font-weight: 600px;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.39);
+}
+.btn{
+
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+}
+.btn button{
+	font-family: Georgia, serif;
+	border:1px solid #234E70;
+	outline: none;
+	border-radius: 20px;
+	background: transparent;
+	font-size: 18px;
+	width: 200px;
+	height: 40px;
+	color:#234E70;
+	font-weight: 800;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+.btn button:hover{
+	background: #234E70;
+	color:#c8b7a6;
+}
+.main-btn{
+	font-family: Georgia, serif;
+	border:1px solid #234E70;
+	outline: none;
+	border-radius: 20px;
+	background: transparent;
+	font-size: 18px;
+	width: 200px;
+	height: 40px;
+	color:#234E70;
+	font-weight: 800;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	position: absolute;
+	bottom: 150px;
+	opacity: 0;
+}
+.main-btn:hover{
+	background: #234E70;
+	color:#c8b7a6;
+}
+.low-level{
+	opacity: 0;
+	position: absolute;
+	left:150px;
+
+}
+.med-level{
+	opacity: 0;
+	position: absolute;
+	left:150px;
+}
+.fotter{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	bottom: 30px;
+	color:#234E70;
+	font-weight: 800;
+	font-size:18px;
+	text-transform: uppercase;
+	width: calc(100% - 8px);
+	border-top: 1px solid #234E70;
+	height: 10%;
+	letter-spacing: 0px;
+	animation: let 7s linear infinite;
+}
+@keyframes let{
+	0%{
+		letter-spacing: 0px;
+	}
+	50%{
+		letter-spacing: 5px;
+	}
+	100%{
+		letter-spacing: 0px;
+	}
+}
+.hint{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: #E7E8D1;
+	left:50px;
+	top:-200px;
+	cursor: pointer;
+	z-index: 999;
+}
+.hint::before{
+	font-family: Georgia, serif;
+	content: '!';
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%) rotate(0);
+	font-size: 30px;
+	transition: all 0.5s ease-in-out;
+
+}
+.hint:hover::before{
+	transform: translate(-50%,-50%) rotate(360deg);
+}
+.hint-form{
+	position: absolute;
+	background: 400px;
+	height: 300px;
+	width: 600px;
+	z-index: 4;
+	background: #A7BEAE;
+	border-radius: 10px;
+	left:45px;
+	top:120px;
+	display: none;
+}
+
+.text-hint{
+	position: absolute;
+	left:20px;
+	color:darkslateblue;
+	font-size:18px;
+	font-weight: 800;
+}
+.text-hint p {
+	padding: 50px 0;
+}
+.notify{  
+  position:absolute;
+  top:0px;
+  width:100%;
+  height:0;  
+  box-sizing:border-box;
+  color:white;  
+  text-align:center;
+  background:rgba(0,0,0,.6);
+  overflow:hidden;
+  font-size: 18px;
+  box-sizing:border-box;
+  transition:height .2s;
+}
+
+#notifyType:before{
+  display:block;
+  margin-top:15px; 
+  
+}
+
+.active{  
+  height:50px;
+}
+
+.success:before{
+  Content:"Good Job! Success!";
+}
+
+.failure:before{
+  Content:"Oh no! Try again :(";
+}
+@media only screen and (max-width:800px){
+	.main{
+		width: 400px;
+		height: 400px;
+	}
+}

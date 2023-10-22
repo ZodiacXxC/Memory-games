@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="levels.css">
+	<link rel="stylesheet" href="med_sy.css">
+	<link rel="icon" href="sudoku.png" type="image/icon type">
+	<title>Sudoku  Memory Game</title>
+</head>
+<body>
+	<div class="hint"></div>
+	<div class="hint-form">
+		<div class="text-hint">
+			<p>
+				Low level : it's level have a 9 numbers , it's show for 10 seconds and hide , then you must remember a numbers and place this numbers 
+			</p> 
+			<p>
+				Meduim level : it's level have a 18 nmbers , it's show for 10 seconds and hide , then you must remember a numbers and place this numbers
+			</p>
+		</div>
+	</div>
+	<div class="main">
+		<div class="main-m">
+			<h1 id="tit">Sudoku memory game</h1>
+			<h3 id="tits">Choose a level</h3>
+			<div class="btn">
+				<button class="low-level">Low level</button>
+				<button class="med-level">Meduim level</button>
+			</div>
+			<button class="main-btn">Main Page</button>
+			<div class="fotter">
+				development By tareq khaled !!
+			</div>
+		</div>
+		<div class="low-page">
+			<div class="low-btn">
+				<button class="start">Start</button>
+				<button class="home">Home</button>
+				<button class="check" onclick="Check()">Check</button>
+			</div>
+			<div class="container">
+			  <div class="grid">
+			    <div class="cell" id="1" onclick="choose(this.id)"></div>
+			    <div class="cell" id="2" onclick="choose(this.id)"></div>
+			    <div class="cell" id="3" onclick="choose(this.id)"></div>
+			    <div class="cell" id="4" onclick="choose(this.id)"></div>
+			    <div class="cell" id="5" onclick="choose(this.id)"></div>
+			    <div class="cell" id="6" onclick="choose(this.id)"></div>
+			    <div class="cell" id="7" onclick="choose(this.id)"></div>
+			    <div class="cell" id="8" onclick="choose(this.id)"></div>
+			    <div class="cell" id="9" onclick="choose(this.id)"></div>
+			  </div>
+			</div>
+			<div id="digits">
+    		</div>
+		</div>
+		<div class="med-page">
+			<div class="med-btn">
+				<button class="start1">Start</button>
+				<button class="home1">Home</button>
+				<button class="check1" onclick="Check1()">Check</button>
+			</div>
+			<div class="container1">
+			  <div class="grid1">
+			    <div class="cell1" id="m1" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m2" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m3" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m4" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m5" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m6" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m7" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m8" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m9" onclick="choose(this.id)"></div>
+			  </div>
+			  <div class="grid">
+			    <div class="cell1" id="m10" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m11" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m12" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m13" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m14" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m15" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m16" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m17" onclick="choose(this.id)"></div>
+			    <div class="cell1" id="m18" onclick="choose(this.id)"></div>
+			  </div>
+			</div>
+			<div id="digits1">
+    		</div>
+		</div>
+	</div>
+	<div class="notify"><span id="notifyType" class=""></span></div>
+	<script src="anime.js"></script>
+	<script src="med_lev.js"></script>
+	<script src="low_lev.js"></script>
+	<script src="js.js"></script>
+</body>
+</html>
